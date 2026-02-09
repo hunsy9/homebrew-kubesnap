@@ -5,21 +5,21 @@
 class Kubesnap < Formula
   desc "Improved kubernetes context management tool"
   homepage "https://github.com/hunsy9/homebrew-kubesnap"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.0/kubesnap_darwin_x86_64.tar.gz"
-      sha256 "f8bd8d165474b53f8eeb3628419ce031340d9d6aca49e2a457d445d67e011f16"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.1/kubesnap_darwin_x86_64.tar.gz"
+      sha256 "2552c0d1505563050e402430130267bf2c8bf3c55fa65ca713f769196160ddd9"
 
       def install
         bin.install "ks"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.0/kubesnap_darwin_arm64.tar.gz"
-      sha256 "dc0152458f90396036d6097f76898af347b6ae37fcd5a992b74f71ca5c349dcc"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.1/kubesnap_darwin_arm64.tar.gz"
+      sha256 "ff6f1064da01ab96654673953f7cad937cd94e7895e7dc8eb6710a45fa2b8eb5"
 
       def install
         bin.install "ks"
@@ -29,15 +29,15 @@ class Kubesnap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.0/kubesnap_linux_x86_64.tar.gz"
-      sha256 "6b6cb00796961d223cdeea1df39a5dae0f60e73a2c8e5b0233b1140825307220"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.1/kubesnap_linux_x86_64.tar.gz"
+      sha256 "23db80b28a69a9b617235b44de4165f8a85058350a9c1ff6c7d90c64be7103dc"
       def install
         bin.install "ks"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.0/kubesnap_linux_arm64.tar.gz"
-      sha256 "9752068691f42d03bf9c9faade643b4e6bc9b3e76898dfa8e1bb443ed4d0af67"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.1/kubesnap_linux_arm64.tar.gz"
+      sha256 "039972a93b0ec63ce34845058e2276bcd18557633fb22367fa307c7a9a5e28ee"
       def install
         bin.install "ks"
       end
