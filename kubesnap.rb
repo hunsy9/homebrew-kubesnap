@@ -5,41 +5,41 @@
 class Kubesnap < Formula
   desc "Improved kubernetes context management tool"
   homepage "https://github.com/hunsy9/homebrew-kubesnap"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.2/kubesnap_darwin_x86_64.tar.gz"
-      sha256 "cb00bfe1f13637737fa6ed8165d38cc2870262f7d5f086f0bfa3f15a515c9c9c"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.3/kubesnap_darwin_x86_64.tar.gz"
+      sha256 "46e288594910dac7cfaecaba524d0bf5b3035647aefb2fc9edcc1243764baf9f"
 
       def install
-        bin.install "ks"
+        bin.install "kubesnap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.2/kubesnap_darwin_arm64.tar.gz"
-      sha256 "d864251659d376694b6479232d19558a2d95b464775d9b992a24b03275c5742d"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.3/kubesnap_darwin_arm64.tar.gz"
+      sha256 "2bba2f1613d3aa490ca739c8fe1aa6c2e6b107c220eef40a52df8c6185ee0a4d"
 
       def install
-        bin.install "ks"
+        bin.install "kubesnap"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.2/kubesnap_linux_x86_64.tar.gz"
-      sha256 "bd94e7c7529f4de3a26007a9d7fc4f30e47371bc5a1bcf4d5a8ee1bbda38277a"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.3/kubesnap_linux_x86_64.tar.gz"
+      sha256 "4762cdc811e155c02f46b067359e241d27e3ac79f8f7e7acf2bf0e400d1e7fe9"
       def install
-        bin.install "ks"
+        bin.install "kubesnap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.2/kubesnap_linux_arm64.tar.gz"
-      sha256 "7ce876dddeda423dcbd0a71f0e90b3407e1f5fbbf5752e3d0f8011d0f05d7de5"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.3/kubesnap_linux_arm64.tar.gz"
+      sha256 "27755c8e7560a62184d3fac984199179a1d83cb5d0afa5471cf9aa8362904629"
       def install
-        bin.install "ks"
+        bin.install "kubesnap"
       end
     end
   end
