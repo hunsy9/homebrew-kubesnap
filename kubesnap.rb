@@ -5,21 +5,21 @@
 class Kubesnap < Formula
   desc "Improved kubernetes context management tool"
   homepage "https://github.com/hunsy9/homebrew-kubesnap"
-  version "0.2.4"
+  version "0.2.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.4/kubesnap_darwin_x86_64.tar.gz"
-      sha256 "28b0df820af174eeec2f93a19840a2d710343e02553aeb3367654c8dfbc9034a"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.5/kubesnap_darwin_x86_64.tar.gz"
+      sha256 "d3464a6bb416de53950aeb0de7381d34a568f7d98d86b7694013fa1dd6e3fe2e"
 
       def install
         bin.install "kubesnap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.4/kubesnap_darwin_arm64.tar.gz"
-      sha256 "fd71cd7b4195397af3ed3a80a83be91e3e392400a4a92eead096140bf59d6549"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.5/kubesnap_darwin_arm64.tar.gz"
+      sha256 "0b36092a5391f1b5cbb2f8491be12fb4231299fbebd90818c05c141b38580932"
 
       def install
         bin.install "kubesnap"
@@ -29,15 +29,15 @@ class Kubesnap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.4/kubesnap_linux_x86_64.tar.gz"
-      sha256 "941e32c6b8f824de73d6ba004786747dbdbcdf8c323a5bf45ac6d251c7cca367"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.5/kubesnap_linux_x86_64.tar.gz"
+      sha256 "40fa403204b107071fadfbdb80fd2557f13acac79108ee223317120893572ae0"
       def install
         bin.install "kubesnap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.4/kubesnap_linux_arm64.tar.gz"
-      sha256 "0c597c6622917abb34c796bc69acd1a69f7bdaabbbe150c0fedc247b2a75cafe"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.5/kubesnap_linux_arm64.tar.gz"
+      sha256 "63cd9dcacb921b0c467a30eb3f90d22f09570ae1a2711abebd0fdd3d0c615947"
       def install
         bin.install "kubesnap"
       end
