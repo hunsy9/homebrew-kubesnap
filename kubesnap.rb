@@ -5,23 +5,23 @@
 class Kubesnap < Formula
   desc "Improved kubernetes context management tool"
   homepage "https://github.com/hunsy9/homebrew-kubesnap"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.5/kubesnap_darwin_x86_64.tar.gz"
-      sha256 "d3464a6bb416de53950aeb0de7381d34a568f7d98d86b7694013fa1dd6e3fe2e"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.6/kubesnap_darwin_x86_64.tar.gz"
+      sha256 "b627e9eee955c191125d061e9992a911346ac1e5a2775d377c71327f8686d178"
 
-      def install
+      define_method(:install) do
         bin.install "kubesnap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.5/kubesnap_darwin_arm64.tar.gz"
-      sha256 "0b36092a5391f1b5cbb2f8491be12fb4231299fbebd90818c05c141b38580932"
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.6/kubesnap_darwin_arm64.tar.gz"
+      sha256 "b8f3f1e417e5909ca8512c6f9107d4275fdf0f70eee3be33aca70ef797179ebb"
 
-      def install
+      define_method(:install) do
         bin.install "kubesnap"
       end
     end
@@ -29,16 +29,16 @@ class Kubesnap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.5/kubesnap_linux_x86_64.tar.gz"
-      sha256 "40fa403204b107071fadfbdb80fd2557f13acac79108ee223317120893572ae0"
-      def install
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.6/kubesnap_linux_x86_64.tar.gz"
+      sha256 "98fa89b25785a20db80516b3aa969e6016bc343b53f0b389190bc395c5608c39"
+      define_method(:install) do
         bin.install "kubesnap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.5/kubesnap_linux_arm64.tar.gz"
-      sha256 "63cd9dcacb921b0c467a30eb3f90d22f09570ae1a2711abebd0fdd3d0c615947"
-      def install
+      url "https://github.com/hunsy9/kubesnap/releases/download/0.2.6/kubesnap_linux_arm64.tar.gz"
+      sha256 "670cdae0185303e2ac695965573eefa3a6ca759e7af8d6093f5540f24b666dcf"
+      define_method(:install) do
         bin.install "kubesnap"
       end
     end
